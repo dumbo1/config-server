@@ -1,5 +1,4 @@
-server:
-  port: 8080
+
 foo: foo version 1
 
 spring:
@@ -20,17 +19,9 @@ mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml
   mapper-locations: classpath:mybatis/mapper/**/*.xml
 
-#client向eureka注册服务
-eureka:
-  client:
-    service-url:
-        defaultZone: http://localhost:9001/eureka/
-#      defaultZone: http://eureka-1:9001/eureka/,http://eureka-2:9002/eureka/,http://eureka-3:9003/eureka/
+
   instance:
       instance-id: ${spring.cloud.client.ip-address}:${server.port}
       prefer-ip-address: true
       lease-renewal-interval-in-seconds: 5 #心跳检查时间(默认30s)
       lease-expiration-duration-in-seconds: 10 #心跳检查间隙时间(默认90s)
-info:
-  app.name: dept-server-api
-  url: http://localhost:8080
