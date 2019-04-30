@@ -1,5 +1,6 @@
 
 #读取服务链路配置
+spring:
   zipkin:
     base-url: http://localhost:9010
   sleuth:
