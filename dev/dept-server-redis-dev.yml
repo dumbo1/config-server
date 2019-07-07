@@ -9,3 +9,5 @@ spring:
           min-idle: 8
           max-wait: 50000ms
       timeout: 50000ms
+    cache:
+      type: redis
